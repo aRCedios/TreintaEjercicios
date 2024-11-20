@@ -27,9 +27,12 @@ public class TreintaEjercicios {
         System.out.println("22. Escribir un programa en Java que lea un numero entero por el teclado e imprima todos los numeros impares menores que el.");
         System.out.println("23. Implemente el algoritmo de Euclides para encontrar el gcd de dos número leídos desde teclado.");
         System.out.println("24. Escriba un programa que lea los coeficientes a, b y c de una ecuación de segundo, y estudie si tiene o no solución. En caso positivo, las soluciones se calcularán e imprimirán en pantalla.");
-        //aquí falta el 25
+        System.out.println("25. Pruebe la recursividad en Java. Escriba programas que calculen recursivamente las funciones factorial(n) y Ackermann(x, y).");
         System.out.println("26. Escriba un programa que lea tres numeros enteros positivos, y que calcule e imprima en pantalla el menor y el mayor de todos ellos.");
         System.out.println("27. Escriba un programa que lea temperaturas expresadas en grados Fahrenheit y las convierta a grados Celsius mostrándola. El programa finalizará cuando lea un valor de temperatura igual a 999. La conversión de grados Farenheit (F) a Celsius (C) está dada por C = 5/9(F − 32).");
+        System.out.println("28. Implemente una sentencia switch que escriba un mensaje en cada caso. Inclúyala en bucle de prueba for. Utilice también un break tras cada caso y pruébelo. Elimine el break y vea qué ocurre.");
+        System.out.println("29. Cuando se lee una entrada estándar, por lo general se alcanza el fin de archivo cuando el usuario teclea CRTL-D, CRTL-Z, o algún otro carácter dependiente del sistema. Descubra cuál es el adecuado en su sistema. Escriba un programa que lea datos controlando el fin de la secuencia con la combinación adecuada.");
+        System.out.println("30. Escriba un programa que use dos bucles for anidados y el operador de módulo (%) para detectar e imprimir números primos.");
         System.out.println("31. Salir.");   
         while(true){
             Scanner a = new Scanner(System.in);
@@ -155,6 +158,28 @@ public class TreintaEjercicios {
                     int p = a.nextInt();
                     TreintaEjercicios.ejercicio24(ñ,o,p);
                 }
+                case 25->{
+                    System.out.println("25. Pruebe la recursividad en Java. Escriba programas que calculen recursivamente las funciones factorial(n) y Ackermann(x, y).");
+                    System.out.println("Ingrese un numero entero positivo para sacar el el factorial. ");
+                    long r = a.nextLong();
+                    
+                    if(r>=0){
+                        System.out.println("El resultado del factorial es: "+TreintaEjercicios.ejercicio25a(r));
+                    }
+                    else{
+                        System.out.println("El numero debe ser positivo. ");
+                    }
+                    System.out.println("Ingrese un numero entero positivo para Ackermann. ");
+                    int t = a.nextInt();
+                    System.out.println("Ingrese un numero entero positivo para Ackermann. ");
+                    int u = a.nextInt();
+                    if(t < 0 || u < 0){
+                        System.out.println("Ingrese valores mayores o iguales a 0. ");
+                    }
+                    else{
+                        System.out.println("Ackermann: "+TreintaEjercicios.ejercicio25b(t,u));
+                    }
+                }
                 case 26 -> { 
                     System.out.println("26. Escriba un programa que lea tres numeros enteros positivos, y que calcule e imprima en pantalla el menor y el mayor de todos ellos.");
                     System.out.println("Ingrese el primer numero entero positivo: ");
@@ -176,6 +201,27 @@ public class TreintaEjercicios {
                         System.out.println("La temperatura en celsius es: "+TreintaEjercicios.ejercicio27(q));
                     }
                 }
+                case 28->{
+                    System.out.println("28. Implemente una sentencia switch que escriba un mensaje en cada caso. Inclúyala en bucle de prueba for. Utilice también un break tras cada caso y pruébelo. Elimine el break y vea qué ocurre.");
+                    System.out.println("Todo mi programa funciona con un switch. :)");
+                }
+                case 29->{
+                    System.out.println("29. Cuando se lee una entrada estándar, por lo general se alcanza el fin de archivo cuando el usuario teclea CRTL-D, CRTL-Z, o algún otro carácter dependiente del sistema. Descubra cuál es el adecuado en su sistema. Escriba un programa que lea datos controlando el fin de la secuencia con la combinación adecuada.");
+                    System.out.println("Ingrese su frase: ");
+                    String v = a.next();
+                    System.out.println("Su frase es: "+v);
+                }
+                case 30->{
+                    System.out.println("30. Escriba un programa que use dos bucles for anidados y el operador de módulo (%) para detectar e imprimir números primos.");
+                    System.out.println("Ingrese un numero entero positivo: ");
+                    int x = a.nextInt();
+                    if(TreintaEjercicios.ejercicio30(x)){
+                        System.out.println("Es primo. ");
+                    }
+                    else{
+                        System.out.println("NO es primo. ");
+                    }
+                }
                 case 31 -> { 
                     System.out.println("31. Salir.");
                     System.out.println("Fin. ");
@@ -183,7 +229,6 @@ public class TreintaEjercicios {
                 }
                 default -> System.out.println("Ingrese una opcion valida.");
             }
-            //aquí falta el 25
             System.out.println("Siguiente opcion: ");
         }
     }
@@ -321,7 +366,25 @@ public class TreintaEjercicios {
             System.out.println("Las raices son: "+r1+" y "+r2);
         }  
     }
-    //aquí falta el 25
+    public static long ejercicio25a(long x){
+        if(x==0||x==1){
+            return 1;
+        }
+        else{
+            return x*ejercicio25a(x-1);
+        }
+    }
+    public static int ejercicio25b(int x,int y){
+        if(x==0){
+            return y+1;
+        }
+        else if(x > 0 && y == 0){
+            return ejercicio25b(x-1,1);
+        }
+        else{
+            return ejercicio25b(x-1,ejercicio25b(x,y-1));
+        }
+    }
     public static int[] ejercicio26(int x, int y, int z){
         int mayor= x, menor = x;
         if(y>mayor){
@@ -339,11 +402,22 @@ public class TreintaEjercicios {
         int [] mayorMenor = new int[2];
         mayorMenor[0] = mayor;
         mayorMenor[1] = menor;
-        return mayorMenor;
-        
+        return mayorMenor;    
     }
     public static double ejercicio27(double x){
         double C = (5.0/9.0)*(x-32);// si pongo 5 y 9 hace division de enteros y no funciona bien.
         return C;
+    }
+    public static boolean ejercicio30(int x){
+        int y =(int)Math.sqrt(x);
+        if(x<=1){
+            return false;    
+        }
+        for(int i= 2;i<=y;i++){
+            if(x % i == 0){
+                return false;
+            }
+        }
+        return true;
     }
 }
