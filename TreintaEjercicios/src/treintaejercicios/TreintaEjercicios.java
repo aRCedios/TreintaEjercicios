@@ -35,118 +35,117 @@ public class TreintaEjercicios {
             Scanner a = new Scanner(System.in);
             int s = a.nextInt();
             switch(s){
-                case 1:
+                case 1 -> {
                     System.out.println("1. Escribir un programa en Java que imprima por pantalla la frase: Hola, ya se imprimir frases.");
                     TreintaEjercicios.ejercicio1();
-                break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.println("2. Escribir un programa en Java que imprima por pantalla un numero entero, por ejemplo el 273, o el 597.");
                     System.out.println(TreintaEjercicios.ejercicio2());
-                break;
-                case 3: 
+                }
+                case 3 -> { 
                     System.out.println("3. Escribir un programa en Java que imprima por pantalla un numero decimal, por ejemplo el 5.3, o el 7.5.");
                     System.out.println(TreintaEjercicios.ejercicio3());
-                break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("4. Escribir un programa en Java que imprima por pantalla la suma de 1234 y 532.");
                     System.out.println(TreintaEjercicios.ejercicio4());
-                break;
-                case 5: 
+                }
+                case 5 -> { 
                     System.out.println("5. Escribir un programa en Java que imprima por pantalla la resta de 1234 y 532.");
                     System.out.println(TreintaEjercicios.ejercicio5());
-                break;
-                case 6: 
+                }
+                case 6 -> { 
                     System.out.println("6. Escribir un programa en Java que imprima por pantalla la multiplicacion de 1234 y 532.");
                     System.out.println(TreintaEjercicios.ejercicio6());
-                break;
-                case 7: 
+                }
+                case 7 -> { 
                     System.out.println("7. Escribir un programa en Java que imprima por pantalla la division de 1234 y 532.");
                     System.out.println(TreintaEjercicios.ejercicio7());
-                break;
-                case 8: 
+                }
+                case 8 -> { 
                     System.out.println("8. Escribir un programa en Java que imprima por pantalla los numeros del 1 al 3.");
                     TreintaEjercicios.ejercicio8();
-                break;
-                case 9: 
+                }
+                case 9 -> { 
                     System.out.println("9. Escribir un programa en Java que imprima por pantalla los numeros del 1 al 9.");
                     TreintaEjercicios.ejercicio9();
-                break;
-                case 10: 
+                }
+                case 10 -> { 
                     System.out.println("10. Escribir un programa en Java que imprima por pantalla los numeros del 1 al 10000.");
                     TreintaEjercicios.ejercicio10();
-                break;
-                case 11: 
+                }
+                case 11 -> { 
                     System.out.println("11. Escribir un programa en Java que imprima por pantalla los numeros del 5 al 10.");
                     TreintaEjercicios.ejercicio11();
-                break;
-                case 12:
+                }
+                case 12 -> {
                     System.out.println("12. Escribir un programa en Java que imprima por pantalla los numeros del 5 al 15.");
                     TreintaEjercicios.ejercicio12();
-                break;
-                case 13: 
+                }
+                case 13 -> { 
                     System.out.println("13. Escribir un programa en Java que imprima por pantalla los numeros del 5 al 15000.");
                     TreintaEjercicios.ejercicio13();
-                break;
-                case 14:
+                }
+                case 14 -> {
                     System.out.println("14. Escribir un programa en Java que imprima 200 veces la palabra 'hola'.");
                     TreintaEjercicios.ejercicio14();
-                break;
-                case 15: 
+                }
+                case 15 -> { 
                     System.out.println("15. Escribir un programa en Java que imprima por pantalla los cuadrados de los 30 primeros numeros naturales.");
                     TreintaEjercicios.ejercicio15();
-                break;
-                case 16:
+                }
+                case 16 -> {
                     System.out.println("16. Escribir un programa en Java que multiplique los 20 primeros número naturales (1*2*3*4*5...).");
                     System.out.println("20! = "+TreintaEjercicios.ejercicio16());
-                break;
-                case 17: 
+                }
+                case 17 -> { 
                     System.out.println("17. Escribir un programa en Java que sume los cuadrados de los cien primeros números naturales, mostrando el resultado en pantalla.");
                     System.out.println(TreintaEjercicios.ejercicio17());
-                break;
-                case 18:
+                }
+                case 18 -> {
                     System.out.println("18. Escribir un programa en Java que lea un número entero desde teclado y realiza la suma de los 100 número siguientes, mostrando el resultado en pantalla."); 
                     System.out.println("Ingrese un numero entero positivo: ");
                     int l = a.nextInt();
                     System.out.println("El resultado de la suma es: "+TreintaEjercicios.ejercicio18(l));
-                break;
-                case 19:
+                }
+                case 19 -> {
                     System.out.println("19. Escribir un programa en Java que convierta de euros a dolares. Recibira un numero decimal correspondiente a la cantidad en euros y contestara con la cantidad correspondiente en dolares.");
                     System.out.println("El cambio esta en: 1 euro = 1,0547 dolares, ingrese la cantidad de euros que tiene escribiendo los decimales con: ',' ");
                     double e = a.nextDouble();
                     System.out.println("Usted tiene: "+TreintaEjercicios.ejercicio19(e)+" dolares");
-                break;
-                case 20:
+                }
+                case 20 -> {
                     System.out.println("20. Escribir un programa en Java que calcule el area de un rectangulo del cual se le proporcionara por el teclado su altura y anchura (números decimales).");
                     System.out.println("Ingrese la base separando los decimales con ',': ");
                     double b = a.nextDouble();
                     System.out.println("Ingrese la altura separando los decimales con ',': ");
                     double c = a.nextDouble();
                     System.out.println("El area del rectangulo es: "+TreintaEjercicios.ejercicio20(b,c));
-                break;
-                case 21:
+                }
+                case 21 -> {
                     System.out.println("21. Escribir un programa en Java que lea dos numeros del teclado y diga cual es el mayor y cual el menor.");
                     System.out.println("Ingrese el primer numero separando los decimales con ',': ");
                     double f = a.nextDouble();
                     System.out.println("Ingrese el segundo numero separando los decimales con ',': ");
                     double g = a.nextDouble();
                     System.out.println("El mayor es: "+TreintaEjercicios.ejercicio21(f,g));
-                break;
-                case 22:
+                }
+                case 22 -> {
                     System.out.println("22. Escribir un programa en Java que lea un numero entero por el teclado e imprima todos los numeros impares menores que el.");
                     System.out.println("Ingrese un numero entero positivo: ");
                     double h = a.nextDouble();
                     TreintaEjercicios.ejercicio22(h);
-                break;
-                case 23:
+                }
+                case 23 -> {
                     System.out.println("23. Implemente el algoritmo de Euclides para encontrar el gcd de dos número leídos desde teclado.");
                     System.out.println("ingrese un numero entero positivo: ");
                     int m = a.nextInt();
                     System.out.println("ingrese un numero entero positivo: ");
                     int n = a.nextInt();
                     System.out.println("El maximo comun multiplo es: "+TreintaEjercicios.ejercicio23(m,n));
-
-                break;
-                case 24:
+                }
+                case 24 -> {
                     System.out.println("24. Escriba un programa que lea los coeficientes a, b y c de una ecuación de segundo, y estudie si tiene o no solución. En caso positivo, las soluciones se calcularán e imprimirán en pantalla.");
                     System.out.println("Ingrese un entero: ");
                     int ñ = a.nextInt();
@@ -155,9 +154,8 @@ public class TreintaEjercicios {
                     System.out.println("Ingrese un entero: ");
                     int p = a.nextInt();
                     TreintaEjercicios.ejercicio24(ñ,o,p);
-                break;
-                //aquí falta el 25
-                case 26: 
+                }
+                case 26 -> { 
                     System.out.println("26. Escriba un programa que lea tres numeros enteros positivos, y que calcule e imprima en pantalla el menor y el mayor de todos ellos.");
                     System.out.println("Ingrese el primer numero entero positivo: ");
                     int i = a.nextInt();
@@ -168,8 +166,8 @@ public class TreintaEjercicios {
                     int [] mayorMenor = TreintaEjercicios.ejercicio26(i,j,k);
                     System.out.println("El numero mayor es: "+mayorMenor[0]);
                     System.out.println("El numero menor es: "+mayorMenor[1]);
-                break;
-                case 27:
+                }
+                case 27 -> {
                     System.out.println("27. Escriba un programa que lea temperaturas expresadas en grados Fahrenheit y las convierta a grados Celsius mostrándola. El programa finalizará cuando lea un valor de temperatura igual a 999. La conversión de grados Farenheit (F) a Celsius (C) está dada por C = 5/9(F − 32).");
                     double q = 0;
                     while(q!= 999){
@@ -177,13 +175,15 @@ public class TreintaEjercicios {
                         q = a.nextInt();
                         System.out.println("La temperatura en celsius es: "+TreintaEjercicios.ejercicio27(q));
                     }
-                break;
-                case 31: 
+                }
+                case 31 -> { 
                     System.out.println("31. Salir.");
                     System.out.println("Fin. ");
                     return;
-                default: System.out.println("Ingrese una opcion valida.");
+                }
+                default -> System.out.println("Ingrese una opcion valida.");
             }
+            //aquí falta el 25
             System.out.println("Siguiente opcion: ");
         }
     }
